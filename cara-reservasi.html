@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cara reservasi tempat di Raskop Coffee & Space Bandung. Mudah, cepat, dan bisa pre-order menu." />
+  <title>Cara Reservasi — Rasa Kopi</title>
+  <link rel="icon" type="image/x-icon" href="Brand_assets/ico/raskop-favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .cr-hero {
+      padding: 140px 0 60px;
+      background: var(--dark-2);
+      text-align: center;
+    }
+    .cr-hero .section-title { margin-bottom: 16px; }
+    .cr-hero .section-sub { max-width: 540px; margin: 0 auto; }
+
+    .cr-steps {
+      padding: 80px 0;
+      background: var(--dark);
+    }
+    .cr-steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .cr-step-card {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      padding: 32px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: var(--r-lg);
+      transition: var(--trans);
+    }
+    .cr-step-card:hover {
+      border-color: rgba(224,135,86,.25);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,0,0,.3);
+    }
+    .cr-step-num {
+      flex-shrink: 0;
+      width: 48px; height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--amber);
+      background: rgba(224,135,86,.1);
+      border: 1px solid rgba(224,135,86,.25);
+      border-radius: 12px;
+    }
+    .cr-step-content h3 {
+      font-family: var(--font-sans);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .cr-step-content p {
+      font-size: .9rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .cr-note {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 28px;
+      background: rgba(224,135,86,.06);
+      border: 1px solid rgba(224,135,86,.15);
+      border-radius: var(--r-lg);
+      margin-top: 48px;
+    }
+    .cr-note-title {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      color: var(--amber);
+      font-size: .9rem;
+      margin-bottom: 8px;
+    }
+    .cr-note p {
+      font-size: .85rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .cr-cta {
+      text-align: center;
+      padding: 64px 0 80px;
+      background: var(--dark);
+    }
+    .cr-cta .section-title { margin-bottom: 16px; }
+    .cr-cta .section-sub { max-width: 480px; margin: 0 auto 32px; }
+
+    @media (max-width: 600px) {
+      .cr-step-card { flex-direction: column; gap: 16px; padding: 24px 20px; }
+      .cr-hero { padding: 120px 0 48px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="Brand_assets/Logo raskop.png" alt="Raskop" class="logo-img" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Tentang Raskop</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="cara-reservasi.html" class="nav-link active">Cara Reservasi</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" id="mobile-close">✕</button>
+    <ul>
+      <li><a href="index.html" class="mobile-link">Tentang Raskop</a></li>
+      <li><a href="menu.html" class="mobile-link">Menu</a></li>
+      <li><a href="cara-reservasi.html" class="mobile-link active">Cara Reservasi</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="cr-hero">
+    <div class="container">
+      <h1 class="section-title">Cara <em class="hero-accent">Reservasi</em></h1>
+      <p class="section-sub">Reservasi tempat di Raskop itu gampang. Ikuti langkah-langkah di bawah dan kamu tinggal datang, duduk, nikmati.</p>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="cr-steps">
+    <div class="container">
+      <div class="cr-steps-grid">
+
+        <div class="cr-step-card">
+          <div class="cr-step-num">01</div>
+          <div class="cr-step-content">
+            <h3>Isi Data Diri & Waktu</h3>
+            <p>Masukkan nama, nomor WhatsApp, jumlah tamu, pilih tanggal & jam kedatangan, serta area yang kamu mau (Indoor, Outdoor, atau Study Zone).</p>
+          </div>
+        </div>
+
+        <div class="cr-step-card">
+          <div class="cr-step-num">02</div>
+          <div class="cr-step-content">
+            <h3>Pre-Order Menu</h3>
+            <p>Pilih menu kopi, non-kopi, mocktail, atau makanan langsung dari form reservasi. Minimum 1 item per orang. Menu akan disiapkan sebelum kamu tiba.</p>
+          </div>
+        </div>
+
+        <div class="cr-step-card">
+          <div class="cr-step-num">03</div>
+          <div class="cr-step-content">
+            <h3>Review & Bayar</h3>
+            <p>Cek kembali detail reservasimu. Pilih metode pembayaran (QRIS, Bank Transfer, atau E-Wallet), lalu submit reservasi.</p>
+          </div>
+        </div>
+
+        <div class="cr-step-card">
+          <div class="cr-step-num">04</div>
+          <div class="cr-step-content">
+            <h3>Konfirmasi via WhatsApp</h3>
+            <p>Setelah submit, kamu akan diarahkan untuk mengirim konfirmasi ke WhatsApp admin. Admin akan membalas dalam waktu 30 menit.</p>
+          </div>
+        </div>
+
+        <div class="cr-step-card">
+          <div class="cr-step-num">05</div>
+          <div class="cr-step-content">
+            <h3>Datang & Nikmati</h3>
+            <p>Tunjukkan ID reservasimu saat tiba. Pesananmu sudah siap di meja. Toleransi keterlambatan 15 menit dari jam yang dipilih.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="cr-note">
+        <div class="cr-note-title">Catatan Penting</div>
+        <p>Reservasi valid setelah dikonfirmasi admin. Jika lebih dari 15 menit dari jam kedatangan, kursi bisa diberikan ke walk-in. Pembatalan bisa dilakukan via WhatsApp sebelum jam kedatangan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cr-cta">
+    <div class="container">
+      <h2 class="section-title">Siap <em class="hero-accent">Reservasi?</em></h2>
+      <p class="section-sub">Pilih tempat, pesan menu, dan tinggal datang. Semudah itu.</p>
+      <a href="reservasi.html" class="btn btn-hero-amber btn-lg">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+        Reservasi Sekarang
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="border-top:1px solid rgba(255,255,255,.07);padding:40px 0;background:var(--dark);">
+    <div class="container" style="display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <img src="Brand_assets/Logo raskop.png" alt="Raskop" style="width:32px;height:32px;object-fit:contain;border-radius:4px;opacity:.8;" />
+        <span style="font-family:var(--font-mono);font-size:.8rem;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.5);">RASA KOPI</span>
+      </div>
+      <span style="font-size:.7rem;color:rgba(255,255,255,.3);font-family:var(--font-mono);">© since 2019 · Bandung · <a href="reservasi.html" style="color:rgba(255,255,255,.4);text-decoration:none;">Reservasi</a></span>
+      <div style="display:flex;align-items:center;gap:6px;margin-top:8px;">
+        <span style="font-size:.7rem;color:rgba(255,255,255,.3);font-family:var(--font-mono);">Powered by</span>
+        <img src="Brand_assets/logo_kinarya.png" alt="Kinarya" style="width:20px;height:20px;object-fit:contain;" />
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
