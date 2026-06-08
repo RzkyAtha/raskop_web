@@ -2177,8 +2177,8 @@ button { cursor: pointer; font-family: var(--font-sans); }
   margin: 0 auto;
 }
 .capacity-card {
-  background: var(--dark-3);
-  border: 1px solid rgba(255,255,255,.07);
+  background: #C4A882;
+  border: 1px solid rgba(255,255,255,.12);
   border-radius: var(--r-lg);
   padding: 28px 20px 24px;
   display: flex;
@@ -2202,8 +2202,8 @@ button { cursor: pointer; font-family: var(--font-sans); }
 }
 .gauge-bg {
   fill: none;
-  stroke: rgba(255,255,255,.06);
-  stroke-width: 8;
+  stroke: rgba(74,44,23,.3);
+  stroke-width: 10;
 }
 .gauge-arc {
   fill: none;
@@ -2228,13 +2228,13 @@ button { cursor: pointer; font-family: var(--font-sans); }
   font-family: var(--font-mono);
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--white);
+  color: #4A2C17;
   line-height: 1;
 }
 .gauge-label {
   font-size: .6rem;
   font-weight: 500;
-  color: var(--muted);
+  color: #4A2C17;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
@@ -2245,12 +2245,12 @@ button { cursor: pointer; font-family: var(--font-sans); }
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #4A2C17;
   margin-bottom: 5px;
 }
 .capacity-seats {
   font-size: .95rem;
-  color: var(--white);
+  color: #4A2C17;
   font-weight: 600;
   margin-bottom: 9px;
 }
@@ -2260,10 +2260,10 @@ button { cursor: pointer; font-family: var(--font-sans); }
   font-weight: 700;
   letter-spacing: 1px;
   padding: 4px 10px;
-  border-radius: var(--r-full);
-  background: rgba(34,197,94,.12);
-  color: var(--success);
-  border: 1px solid rgba(34,197,94,.25);
+  border-radius: 6px;
+  background: #4A2C17;
+  color: #fff;
+  border: none;
   transition: var(--trans);
 }
 .capacity-status-badge.busy {
