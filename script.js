@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initMobileMenu();
+  initHeroPhotoGrid();
   initAreaTabs();
   initMenuCarousel();
   initGallerySlider();
@@ -103,6 +104,68 @@ function initAreaTabs() {
       document.getElementById(`panel-${tab.dataset.tab}`)?.classList.add('active');
     });
   });
+}
+
+/* ─── HERO PHOTO GRID ────────────────────────────── */
+function initHeroPhotoGrid() {
+  const grid = document.getElementById('hero-photo-grid');
+  if (!grid) return;
+
+  const photos = [
+    'Brand_assets/Story 1.jpeg',
+    'Brand_assets/Story 2.jpeg',
+    'Brand_assets/Story 3.JPG',
+    'Brand_assets/Story 4.JPG',
+    'Brand_assets/Story 5.jpg',
+    'Brand_assets/Story 6.JPG',
+    'Brand_assets/Story 7.JPG',
+    'Brand_assets/Story 8.JPG',
+    'Brand_assets/Story 9.JPG',
+    'Brand_assets/Story 10.jpg',
+    'Brand_assets/Story 11.JPG',
+    'Brand_assets/Story 12.JPG',
+    'Brand_assets/Story 13.JPG',
+    'Brand_assets/Story 14.jpg',
+    'Brand_assets/Story 15.jpg',
+    'Brand_assets/Story 16.JPG',
+    'Brand_assets/Story 17.JPG',
+  ];
+
+  const cells = grid.querySelectorAll('.hero-grid-cell img');
+  const shuffled = [...photos].sort(() => Math.random() - 0.5);
+  const activePhotos = shuffled.slice(0, 4);
+  let nextPool = shuffled.slice(4);
+
+  cells.forEach((img, i) => { img.src = activePhotos[i]; });
+
+  let preloaded = null;
+
+  function preloadNext() {
+    if (nextPool.length === 0) {
+      nextPool = photos.filter(p => !activePhotos.includes(p)).sort(() => Math.random() - 0.5);
+    }
+    const src = nextPool.shift();
+    const img = new Image();
+    img.src = src;
+    preloaded = { src, img };
+  }
+
+  preloadNext();
+
+  setInterval(() => {
+    if (!preloaded) return;
+    const idx = Math.floor(Math.random() * cells.length);
+    const cell = cells[idx];
+    const nextSrc = preloaded.src;
+
+    cell.classList.add('fade-out');
+    setTimeout(() => {
+      activePhotos[idx] = nextSrc;
+      cell.src = nextSrc;
+      cell.classList.remove('fade-out');
+      preloadNext();
+    }, 600);
+  }, 3500);
 }
 
 /* ─── MENU SWIPE CAROUSEL ─────────────────────────── */

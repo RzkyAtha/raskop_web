@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Menu lengkap Rasa Kopi (Raskop) — Kopi, Non-Kopi, Mocktail & Makanan. Pre-order saat reservasi, siap sebelum kamu tiba." />
-  <title>Menu — Raskop · Coffee & Space</title>
+  <meta name="description" content="Menu lengkap Rasa Kopi (Raskop). Kopi, Non-Kopi, Mocktail & Makanan. Pre-order saat reservasi, siap sebelum kamu tiba." />
+  <title>Menu | Raskop · Coffee & Space</title>
   <link rel="icon" type="image/x-icon" href="Brand_assets/ico/raskop-favicon.ico" />
   <link rel="icon" type="image/svg+xml" href="Brand_assets/ico/raskop-favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="Brand_assets/ico/raskop-favicon-32x32.png" />
@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     /* ═══════════════════════════════════════
-       MENU PAGE — Redesigned
+       MENU PAGE Redesigned
        Layout: Reference-matched
        Colors: Raskop dark theme
     ═══════════════════════════════════════ */
@@ -103,15 +103,15 @@
       grid-template-columns: 44% 56%;
       border-radius: var(--r-xl);
       overflow: hidden;
-      background: var(--dark-2);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: #c8a882;
+      border: 1px solid #b89770;
       margin-bottom: 16px;
       min-height: 360px;
       transition: border-color var(--t), box-shadow var(--t);
     }
     .featured-card:hover {
-      border-color: rgba(224,135,86,0.2);
-      box-shadow: 0 16px 56px rgba(0,0,0,0.5);
+      border-color: #a07850;
+      box-shadow: 0 16px 56px rgba(60,30,10,.3);
     }
 
     .feat-img-wrap {
@@ -150,9 +150,9 @@
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      background: rgba(22,65,56,0.8);
-      color: #4ade80;
-      border: 1px solid rgba(74,222,128,0.25);
+      background: rgba(42,26,10,.15);
+      color: #2a1a0a;
+      border: 1px solid rgba(42,26,10,.2);
       padding: 5px 11px;
       border-radius: var(--r-full);
     }
@@ -162,27 +162,28 @@
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--muted-2);
+      color: rgba(42,26,10,.4);
     }
     .feat-name {
       font-family: var(--font-serif);
       font-size: clamp(1.6rem, 2.5vw, 2.2rem);
       font-weight: 900;
-      color: var(--white);
+      color: #2a1a0a;
       line-height: 1.1;
       letter-spacing: -0.02em;
     }
     .feat-desc {
-      color: var(--muted);
+      color: rgba(42,26,10,.6);
       font-size: 0.92rem;
       line-height: 1.75;
       max-width: 340px;
+      font-style: italic;
     }
     .feat-price {
       font-family: var(--font-mono);
       font-size: 1.4rem;
       font-weight: 700;
-      color: var(--amber);
+      color: #6b3a1a;
       letter-spacing: -0.02em;
     }
     .btn-order {
@@ -192,8 +193,8 @@
       font-family: var(--font-sans);
       font-size: 0.875rem;
       font-weight: 600;
-      background: var(--amber);
-      color: var(--black);
+      background: #3a2010;
+      color: #fff;
       padding: 12px 24px;
       border-radius: var(--r-full);
       text-decoration: none;
@@ -202,7 +203,7 @@
       border: none;
       cursor: pointer;
     }
-    .btn-order:hover { background: var(--amber-light); transform: translateY(-1px); }
+    .btn-order:hover { background: #2a1608; transform: translateY(-1px); }
     .btn-order:active { transform: translateY(0); }
     .btn-order:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
 
@@ -213,84 +214,98 @@
       gap: 12px;
     }
 
-    /* ─── ITEM CARD ─── */
+    /* ─── ITEM CARD (Cafe Style) ─── */
     .item-card {
-      background: var(--dark-2);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: var(--r-lg);
-      padding: 20px;
+      background: #c8a882;
+      border: 1px solid #b89770;
+      border-radius: 16px;
+      padding: 24px 22px 20px;
       display: flex;
       flex-direction: column;
       position: relative;
       min-width: 0;
       transition: transform var(--t), border-color var(--t), box-shadow var(--t);
+      overflow: hidden;
+    }
+    .item-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #a07850, #b89770, transparent);
     }
     .item-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(224,135,86,0.18);
-      box-shadow: 0 8px 28px rgba(0,0,0,0.4);
+      transform: translateY(-4px);
+      border-color: #a07850;
+      box-shadow: 0 12px 36px rgba(60,30,10,.25);
     }
     .item-top {
       display: flex;
-      align-items: flex-start;
+      align-items: baseline;
       justify-content: space-between;
       gap: 10px;
       min-width: 0;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
     .item-name {
-      font-family: var(--font-sans);
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--white);
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #2a1a0a;
       line-height: 1.3;
       min-width: 0;
       overflow-wrap: anywhere;
+      letter-spacing: -.01em;
     }
     .item-price {
       font-family: var(--font-mono);
-      font-size: 0.875rem;
+      font-size: 0.85rem;
       font-weight: 700;
-      color: var(--amber);
+      color: #2a1a0a;
       white-space: nowrap;
       flex-shrink: 0;
+      background: rgba(42,26,10,.1);
+      padding: 3px 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(42,26,10,.12);
     }
     .item-desc {
       font-size: 0.8rem;
-      color: var(--muted);
-      line-height: 1.65;
+      color: rgba(42,26,10,.5);
+      line-height: 1.7;
       flex: 1;
       min-width: 0;
       overflow-wrap: anywhere;
       margin-bottom: 14px;
+      font-style: italic;
     }
     .item-footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding-top: 12px;
-      border-top: 1px solid rgba(255,255,255,0.05);
+      border-top: 1px solid rgba(42,26,10,.1);
       margin-top: auto;
     }
     .item-bs-badge {
       font-family: var(--font-mono);
       font-size: 8.5px;
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
-      color: #4ade80;
-      background: rgba(22,65,56,0.6);
-      border: 1px solid rgba(74,222,128,0.2);
-      padding: 3px 8px;
+      color: #2a1a0a;
+      background: rgba(42,26,10,.1);
+      border: 1px solid rgba(42,26,10,.18);
+      padding: 4px 10px;
       border-radius: var(--r-full);
     }
     .btn-plus {
       width: 34px;
       height: 34px;
       border-radius: 50%;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: transparent;
-      color: var(--muted);
+      border: 1px solid rgba(42,26,10,.15);
+      background: rgba(42,26,10,.08);
+      color: #2a1a0a;
       font-size: 1.2rem;
       line-height: 1;
       display: flex;
@@ -303,7 +318,7 @@
     .btn-plus:hover {
       background: var(--amber);
       border-color: var(--amber);
-      color: var(--black);
+      color: #fff;
       transform: scale(1.1);
     }
     .btn-plus:active { transform: scale(1); }
@@ -457,6 +472,7 @@
     @media (max-width: 540px) {
       .items-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
       .item-card { padding: 18px 16px; }
+      .item-name { font-size: 0.92rem; }
       .item-top { gap: 8px; }
       .item-name { font-size: 0.88rem; }
       .item-price { font-size: 0.82rem; }
@@ -477,7 +493,7 @@
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="Brand_assets/Logo raskop.png" alt="Raskop" class="logo-img" />
+        <img src="Brand_assets/LOGO_ITEM.png" alt="Raskop" class="logo-img" />
       </a>
       <ul class="nav-links">
         <li><a href="index.html" class="nav-link">Tentang Raskop</a></li>
@@ -534,7 +550,7 @@
             <h3 class="feat-name">Kopi Susu<br />Gula Aren</h3>
             <p class="feat-desc">Manis alami dari gula aren asli, creamy, dan balance. Cocok untuk kamu yang suka manis tapi tetap ngerasa kopinya.</p>
             <div class="feat-price">Rp 20.000</div>
-            <a href="reservasi.html" class="btn-order">Pre-order saat reservasi →</a>
+            <a href="reservasi.html" class="btn-order">Pre-order saat reservasi</a>
           </div>
         </div>
 
@@ -554,7 +570,7 @@
       <section class="menu-section" id="sec-nonkopi">
         <span class="sec-eyebrow">Non-Coffee</span>
         <h2 class="sec-title">tanpa kafein, <em>tetap berasa.</em></h2>
-        <p class="sec-subtitle">Refreshing alternatives untuk siapa aja — dari matcha sampai yakult blend yang funky.</p>
+        <p class="sec-subtitle">Refreshing alternatives untuk siapa aja, dari matcha sampai yakult blend yang funky.</p>
 
         <!-- Featured -->
         <div class="featured-card">
@@ -570,7 +586,7 @@
             <h3 class="feat-name">Mango<br />Yakult</h3>
             <p class="feat-desc">Mango segar di-blend penuh sama yakult. Seger, tangy, nggak ada duanya. Favorit yang selalu habis duluan.</p>
             <div class="feat-price">Rp 20.000</div>
-            <a href="reservasi.html" class="btn-order">Pre-order saat reservasi →</a>
+            <a href="reservasi.html" class="btn-order">Pre-order saat reservasi</a>
           </div>
         </div>
 
@@ -584,7 +600,7 @@
       <section class="menu-section" id="sec-mocktail">
         <span class="sec-eyebrow">Mocktail Series</span>
         <h2 class="sec-title">bold flavors, <em>zero proof.</em></h2>
-        <p class="sec-subtitle">Layering rasa yang unik dan menarik — dibuat dengan serius, diminum dengan santai.</p>
+        <p class="sec-subtitle">Layering rasa yang unik dan menarik. Dibuat dengan serius, diminum dengan santai.</p>
 
         <!-- Featured -->
         <div class="featured-card">
@@ -600,7 +616,7 @@
             <h3 class="feat-name">Whiskey<br />Land</h3>
             <p class="feat-desc">Coldbrew, peach, dan lemon berpadu jadi satu minuman yang funky dan bold. Rasanya nggak ada yang nyangka itu tanpa alkohol.</p>
             <div class="feat-price">Rp 22.000</div>
-            <a href="reservasi.html" class="btn-order">Pre-order saat reservasi →</a>
+            <a href="reservasi.html" class="btn-order">Pre-order saat reservasi</a>
           </div>
         </div>
 
@@ -614,7 +630,7 @@
       <section class="menu-section" id="sec-makanan">
         <span class="sec-eyebrow">Main Course & Snacks</span>
         <h2 class="sec-title">teman ngopi <em>yang pas.</em></h2>
-        <p class="sec-subtitle">Bukan sekadar pelengkap — makanan yang bikin sesi ngopimu makin worth it.</p>
+        <p class="sec-subtitle">Bukan sekadar pelengkap. Makanan yang bikin sesi ngopimu makin worth it.</p>
 
         <!-- Featured: Nasi Goreng -->
         <div class="featured-card">
@@ -628,9 +644,9 @@
               <span class="badge-cat">main course</span>
             </div>
             <h3 class="feat-name">Nasi Goreng<br />Kampung</h3>
-            <p class="feat-desc">Nasi goreng kampung yang jujur — bumbu pas, nggak berlebihan. Selalu jadi pilihan utama yang nggak pernah salah.</p>
+            <p class="feat-desc">Nasi goreng kampung yang jujur, bumbu pas, nggak berlebihan. Selalu jadi pilihan utama yang nggak pernah salah.</p>
             <div class="feat-price">Rp 18.000</div>
-            <a href="reservasi.html" class="btn-order">Pre-order saat reservasi →</a>
+            <a href="reservasi.html" class="btn-order">Pre-order saat reservasi</a>
           </div>
         </div>
 
@@ -646,9 +662,9 @@
               <span class="badge-cat">snacks</span>
             </div>
             <h3 class="feat-name">Pisang<br />Goreng</h3>
-            <p class="feat-desc">Crispy di luar, lembut di dalam. Teman ngopi yang sempurna — hangat, gurih, dan selalu bikin nambah.</p>
+            <p class="feat-desc">Crispy di luar, lembut di dalam. Teman ngopi yang sempurna. Hangat, gurih, dan selalu bikin nambah.</p>
             <div class="feat-price">Rp 16.000</div>
-            <a href="reservasi.html" class="btn-order">Pre-order saat reservasi →</a>
+            <a href="reservasi.html" class="btn-order">Pre-order saat reservasi</a>
           </div>
         </div>
 
@@ -662,7 +678,7 @@
           <div class="cta-left">
             <span class="cta-label">Pre-order · Pasti siap</span>
             <h2 class="cta-title">Sudah Tahu<br />Mau Pesan <em>Apa?</em></h2>
-            <p class="cta-desc">Pilih menu langsung saat reservasi — kami siapkan semuanya sebelum kamu tiba. Tinggal duduk dan nikmati.</p>
+            <p class="cta-desc">Pilih menu langsung saat reservasi. Kami siapkan semuanya sebelum kamu tiba. Tinggal duduk dan nikmati.</p>
           </div>
           <div class="cta-right">
             <a href="reservasi.html" class="btn btn-primary btn-lg">Reservasi &amp; Pilih Menu</a>
